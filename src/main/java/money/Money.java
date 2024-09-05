@@ -3,6 +3,12 @@ package money;
 abstract public class Money {
     protected int amount;
     protected String currency;
+
+    Money(int amount, String currency) {
+        this.amount = amount;
+        this.currency = currency;
+    }
+
     abstract Money times(int amount);
 
     String currency() {
