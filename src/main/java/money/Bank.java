@@ -2,7 +2,10 @@ package money;
 
 public class Bank {
     Money reduce(Expression source, String to) {
-        // TODO testを通すための仮実装
-        return Money.dollar(10);
+        // TODO fixme キャストなくす
+        Sum sum = (Sum) source;
+        // TODO fixme フィールドアクセス
+        int amount = sum.augend.amount + sum.added.amount;
+        return new Money(amount, to);
     }
 }

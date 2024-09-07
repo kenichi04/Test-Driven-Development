@@ -14,7 +14,7 @@ public class Money implements Expression {
     }
 
     Expression plus(Money added) {
-        return new Money(amount + added.amount, currency);
+        return new Sum(this, added);
     }
 
     String currency() {
