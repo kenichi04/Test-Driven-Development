@@ -17,7 +17,7 @@ public class Money implements Expression {
         return new Sum(this, added);
     }
 
-    Money reduce(String to) {
+     public Money reduce(String to) {
         return this;
     }
 
