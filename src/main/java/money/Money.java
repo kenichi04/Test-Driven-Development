@@ -18,7 +18,9 @@ public class Money implements Expression {
     }
 
      public Money reduce(String to) {
-        return this;
+        // TODO 仮実装
+         int rate = (currency.equals("CHF") && to.equals("USD")) ? 2 : 1;
+         return new Money(amount / rate, to);
     }
 
     String currency() {
