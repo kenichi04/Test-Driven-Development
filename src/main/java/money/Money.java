@@ -13,7 +13,7 @@ public class Money implements Expression {
         return new Money(amount * multiplier, currency);
     }
 
-    Expression plus(Expression added) {
+    public Expression plus(Expression added) {
         return new Sum(this, added);
     }
 
