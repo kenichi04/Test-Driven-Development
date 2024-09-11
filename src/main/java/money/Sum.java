@@ -12,8 +12,7 @@ public class Sum implements Expression {
     }
 
     public Expression plus(Expression added) {
-        // TODO 空実装
-        return null;
+        return new Sum(this, added);
     }
 
     public Money reduce(Bank bank, String to) {
