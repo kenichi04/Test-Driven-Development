@@ -11,6 +11,10 @@ public class Sum implements Expression {
         this.added = added;
     }
 
+    public Expression times(int multiplier) {
+        return new Sum(augend.times(multiplier), added.times(multiplier));
+    }
+
     public Expression plus(Expression added) {
         return new Sum(this, added);
     }
